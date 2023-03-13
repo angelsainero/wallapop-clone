@@ -6,14 +6,25 @@ import { buildAdvertsView } from "./advertView.js";
 //recibimos el nodo del controlador
 export function advertListController(advertListElement) {
   advertListElement.innerHTML = '';
+  //mostrar ruleta
+
   //Listado Anuncios
   for (const advert of adverts) {
     const newAdvertListElement = buildAdvertsView(advert);
    advertListElement.appendChild(newAdvertListElement);
   }
+  //ocultar la ruleta
 }
 
-//fetch  js 2 2:20
+
+
+
+
+
+
+
+
+//fetch  js 2 2:20 - ruleta 3:23:00
 
 //si lo ponermos todo en el fichero sin encapsular seria:
 
