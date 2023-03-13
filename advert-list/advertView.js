@@ -1,10 +1,12 @@
+// Es el orquestador de la APP
+
 export function buildAdvertsView(advert) {
-  const newWallaListElement = document.createElement("article");
-  newWallaListElement.innerHTML = `
+  const newAdvertListElement = document.createElement("article");
+  newAdvertListElement.innerHTML = `
       <p>${advert.name}<p>
       <p>${advert.description}<p>
       <p>${advert.price}<p>
       <p>${advert.image}<p>
       `;
-      return newWallaListElement;
+      return newAdvertListElement;
 }

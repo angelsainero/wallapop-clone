@@ -1,14 +1,31 @@
-import { adverts } from "./advert-list/adverts.js";
+//Controlador: Debería RECIBER  del dom el NODO  por parametro
+
+import { adverts } from "./adverts.js";
 import { buildAdvertsView } from "./advertView.js";
 
-
-function drawAdverts() {
-  //Accedemos para obtener el Nodo
-  const wallaListElement = document.querySelector(".wallapop-list");
-
+//recibimos el nodo del controlador
+export function advertListController(advertListElement) {
   //Listado Anuncios
   for (const advert of adverts) {
-    const newWallaListElement = buildAdvertsView (advert)
-    wallaListElement.appendChild(newWallaListElement);
+    const newAdvertListElement = buildAdvertsView(advert);
+   advertListElement.appendChild(newAdvertListElement);
   }
 }
+
+//si lo ponermos todo en el fichero sin encapsular seria:
+
+// import { tweets } from "./tweets.js";
+
+// const tweetListElement = document.querySelector('.tweet-list')
+
+// // generar el HTML que representará un tweet
+// for (const tweet of tweets) {
+//   const newTweetElement = document.createElement('article');
+//   newTweetElement.innerHTML = `
+//     <p>${tweet.handler}</p>
+//     <p>${tweet.body} - ${tweet.date}</p>
+//   `;
+
+//   // añadirlo al DOM.
+//   tweetListElement.appendChild(newTweetElement)
+// }
