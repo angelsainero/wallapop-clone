@@ -1,9 +1,9 @@
 export const adverts = [{
-    image: 'https://cdn.pixabay.com/photo/2015/05/29/19/18/bicycle-789648_1280.jpg',
-    name: 'Bicicleta',
-    description: 'Bicicleta clásica en perfecto estado casi sin uso',
-    price: '300',
-    type: 'sale'
+  image: 'https://cdn.pixabay.com/photo/2015/05/29/19/18/bicycle-789648_1280.jpg',
+  name: 'Bicicleta',
+  description: 'Bicicleta clásica en perfecto estado casi sin uso',
+  price: '300',
+  type: 'sale'
   },
 
   {
@@ -16,7 +16,7 @@ export const adverts = [{
 
   {
     image: 'https://cdn.pixabay.com/photo/2015/02/05/08/06/macbook-624707_1280.jpg',
-    name: 'Ordenado portátil',
+    name: 'Ordenador portátil',
     description: 'Compro ordenado portátil tipo Gamer en buen estado ',
     price: '500',
     type: 'purchase'

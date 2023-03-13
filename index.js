@@ -5,3 +5,5 @@ const advertListElement = document.querySelector(".wallapop-list");
 
 //se lo pasamos al controlador
 advertListController(advertListElement);
+
+//js2 - 1:15:00 botón

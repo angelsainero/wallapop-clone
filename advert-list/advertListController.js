@@ -5,12 +5,15 @@ import { buildAdvertsView } from "./advertView.js";
 
 //recibimos el nodo del controlador
 export function advertListController(advertListElement) {
+  advertListElement.innerHTML = '';
   //Listado Anuncios
   for (const advert of adverts) {
     const newAdvertListElement = buildAdvertsView(advert);
    advertListElement.appendChild(newAdvertListElement);
   }
 }
+
+//fetch  js 2 2:20
 
 //si lo ponermos todo en el fichero sin encapsular seria:
 
