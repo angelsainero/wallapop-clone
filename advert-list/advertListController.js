@@ -1,19 +1,24 @@
 //Controlador: Debería RECIBIR  del dom el NODO  por parametro
 
-import { adverts } from "./adverts.js";
+import { getAdverts } from "./adverts.js";
 import { buildAdvertsView, buildSpinnerView } from "./advertView.js";
 
 //recibimos el nodo del controlador
-export function advertListController(advertListElement) {
-  advertListElement.innerHTML = buildSpinnerView();
+export async function advertListController(advertListElement) {
   //mostrar ruleta
+  advertListElement.innerHTML = buildSpinnerView();
+
+
   //Listado Anuncios
+  const adverts = await getAdverts();
+
+  //ocultar la ruleta
+  hideSpinner(advertListElement);
+
   for (const advert of adverts) {
     const newAdvertListElement = buildAdvertsView(advert);
     advertListElement.appendChild(newAdvertListElement);
   }
-  //ocultar la ruleta
-  hideSpinner(advertListElement);
 }
 
 function hideSpinner(advertListElement) {
@@ -21,8 +26,7 @@ function hideSpinner(advertListElement) {
   spinnerElement.classList.add("hide");
 }
 
-//fetch  js 2 2:20 -
-// ruleta 3:23:00
+
 
 //si lo ponermos todo en el fichero sin encapsular seria:
 
