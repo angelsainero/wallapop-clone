@@ -20,20 +20,31 @@ export function buildSpinnerView() {  //prepara el spinner para que el controlad
   return `<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`
 }
 
-export function buildErrorLoadingAdverts(){
+
+export function buildEmptyAdvertList() {
   return `
-  <div class="alert">
+  <div class="alert-ok">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  No se han podido cargar los Anuncios.
+  No hay ningún Anuncio que Mostrar
 </div>  
   `
 }
 
-export function buildSuccessLoadingAdverts(){
+
+export function buildErrorLoadingAdverts(error){
+  return `
+  <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  ${error}.
+</div>  
+  `
+}
+
+export function buildSuccessLoadingAdverts(success){
   return `
   <div class="alert-ok">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  Se han Cargado todos los Anuncios.
+  ${success}
 </div>  
   `
 }
