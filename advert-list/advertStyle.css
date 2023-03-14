@@ -40,6 +40,13 @@
     margin-bottom: 15px;
   }  
   
+  .alert-gray {
+    padding: 20px;
+    background-color: rgb(53, 53, 52); 
+    color: white;
+    margin-bottom: 15px;
+  }  
+  
   /* The close button */
   .closebtn {
     margin-left: 15px;

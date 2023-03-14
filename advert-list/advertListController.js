@@ -4,19 +4,19 @@ import { getAdverts } from "./adverts.js";
 import {
   buildAdvertsView,
   buildSpinnerView,
-  buildErrorLoadingAdverts,
-  buildSuccessLoadingAdverts,
+  buildErrorLoadingAdverts, 
   buildEmptyAdvertList,
 } from "./advertView.js";
 
 //recibimos el nodo del controlador
-export async function advertListController(advertListElement) {
+export async function advertListController(advertListElement, showMessage) {
   //mostrar ruleta
   advertListElement.innerHTML = buildSpinnerView();
   let adverts = [];
   try {
     //Carga Listado Anuncios
     adverts = await getAdverts();
+    showMessage('Los Anuncios se cargaron correctamente');
 
     //ocultar la ruleta
     hideSpinner(advertListElement);
@@ -31,9 +31,10 @@ export async function advertListController(advertListElement) {
     
     //gestion del error
   } catch (error) {
-    advertListElement.innerHTML = buildErrorLoadingAdverts(
-      "No han podido cargarse los Anuncios"
-    );
+    // advertListElement.innerHTML = buildErrorLoadingAdverts(
+    //   "No han podido cargarse los Anuncios"
+    // );
+    showMessage('No hemos podido cargar los anuncios');
   }
 }
 

@@ -40,11 +40,11 @@ export function buildErrorLoadingAdverts(error){
   `
 }
 
-export function buildSuccessLoadingAdverts(success){
-  return `
-  <div class="alert-ok">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  ${success}
-</div>  
-  `
-}
+// export function buildSuccessLoadingAdverts(success){
+//   return `
+//   <div class="alert-ok">
+//   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+//   ${success}
+// </div>  
+//   `
+// }
