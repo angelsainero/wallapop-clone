@@ -1,4 +1,4 @@
-// VISTA: no debe acceder al DOM
+// VISTA: no debe acceder al DOM 
 
 export function buildAdvertsView(advert) {
   const newAdvertListElement = document.createElement("article");
@@ -13,4 +13,8 @@ export function buildAdvertsView(advert) {
   <p align="right">${advert.price}<p>
   `;
   return newAdvertListElement;
+}
+
+export function buildSpinnerView() {  //prepara el spinner para que el controlador lo mande al dom
+  return `<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`
 }
