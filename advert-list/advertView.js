@@ -24,8 +24,16 @@ export function buildErrorLoadingAdverts(){
   return `
   <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  No se han podido cargar los Tweets.
-</div>
-  
+  No se han podido cargar los Anuncios.
+</div>  
+  `
+}
+
+export function buildSuccessLoadingAdverts(){
+  return `
+  <div class="alert-ok">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Se han Cargado todos los Anuncios.
+</div>  
   `
 }

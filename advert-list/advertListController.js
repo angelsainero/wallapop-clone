@@ -1,10 +1,11 @@
-//Controlador: Debería RECIBIR  del dom el NODO  por parametro
+//Controlador: Debería RECIBIR  del dom el NODO  por parametro que debe gestionar
 
 import { getAdverts } from "./adverts.js";
 import {
   buildAdvertsView,
   buildSpinnerView,
   buildErrorLoadingAdverts,
+  buildSuccessLoadingAdverts
 } from "./advertView.js";
 
 //recibimos el nodo del controlador
@@ -18,6 +19,7 @@ export async function advertListController(advertListElement) {
 
     //ocultar la ruleta
     hideSpinner(advertListElement);
+    advertListElement.innerHTML = buildSuccessLoadingAdverts();
 
     for (const advert of adverts) {
       const newAdvertListElement = buildAdvertsView(advert);
