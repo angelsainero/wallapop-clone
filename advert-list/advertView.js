@@ -19,3 +19,13 @@ export function buildAdvertsView(advert) {
 export function buildSpinnerView() {  //prepara el spinner para que el controlador lo mande al dom
   return `<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`
 }
+
+export function buildErrorLoadingAdverts(){
+  return `
+  <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  No se han podido cargar los Tweets.
+</div>
+  
+  `
+}
