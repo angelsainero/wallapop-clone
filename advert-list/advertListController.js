@@ -3,38 +3,38 @@
 import { getAdverts } from "./adverts.js";
 import {
   buildAdvertsView,
-  buildSpinnerView,
-  buildErrorLoadingAdverts, 
+  buildSpinnerView,  
   buildEmptyAdvertList,
 } from "./advertView.js";
 
+
 //recibimos el nodo del controlador
-export async function advertListController(advertListElement, showMessage) {
+export async function advertListController(advertListElement) {
   //mostrar ruleta
   advertListElement.innerHTML = buildSpinnerView();
   let adverts = [];
   try {
     //Carga Listado Anuncios
     adverts = await getAdverts();
-    showMessage('Los Anuncios se cargaron correctamente');
-
-    //ocultar la ruleta
-    hideSpinner(advertListElement);
-
+    // showMessage("Los Anuncios se cargaron correctamente");
+    dispatchCustomEvent("Los Anuncios se cargaron correctamente", advertListElement)
+    
     //Gestión si hay o no anuncios
     if (adverts.length > 0) {
       drawAdverts(adverts, advertListElement);
     } else {
       showEmptyMessage(advertListElement);
     }
-
     
     //gestion del error
   } catch (error) {
-    // advertListElement.innerHTML = buildErrorLoadingAdverts(
-    //   "No han podido cargarse los Anuncios"
-    // );
-    showMessage('No hemos podido cargar los anuncios');
+    // showMessage("No hemos podido cargar los anuncios");
+    dispatchCustomEvent("No hemos podido cargar los anuncios", advertListElement)
+    
+  } finally {
+    //ocultar la ruleta
+    hideSpinner(advertListElement);
+    
   }
 }
 
@@ -52,4 +52,14 @@ function drawAdverts(adverts, advertListElement) {
 
 function showEmptyMessage(advertListElement) {
   advertListElement.innerHTML = buildEmptyAdvertList();
+}
+
+function dispatchCustomEvent(message, advertListElement) {
+  const event = new CustomEvent ('newNotification', {
+    detail: {
+      message: message
+    }
+  })
+  //propagamos evento al nodo que controlamos 
+  advertListElement.dispatchEvent(event);
 }

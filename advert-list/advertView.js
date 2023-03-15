@@ -31,20 +31,3 @@ export function buildEmptyAdvertList() {
 }
 
 
-export function buildErrorLoadingAdverts(error){
-  return `
-  <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  ${error}.
-</div>  
-  `
-}
-
-// export function buildSuccessLoadingAdverts(success){
-//   return `
-//   <div class="alert-ok">
-//   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-//   ${success}
-// </div>  
-//   `
-// }
