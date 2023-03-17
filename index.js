@@ -15,7 +15,8 @@ advertListController(advertListElement);
 userActionsController(userActionsElement);
 
 
-//punto de unión entre controladores
+//punto de unión entre controladores, Usamos addEventListener y no pubSub para que la práctica sirva 
+//de teoria a futuro 
 advertListElement.addEventListener("newNotification", (event) => {
   console.log("he recibido el evento", event.detail.message);
   showMessage(event.detail.message)

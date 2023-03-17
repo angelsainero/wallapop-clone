@@ -4,6 +4,7 @@ export function buildAdvertsView(advert) {
   const newAdvertListElement = document.createElement("article");
   newAdvertListElement.classList.add("advert"); //añadimos al dom la class
   newAdvertListElement.innerHTML = `
+  <a href="/advert-detail.html?advertId=${advert.id}">
   <div class="adv-title">
     <img src="${advert.image}"/>
     <span>${advert.name}<span>
@@ -12,6 +13,7 @@ export function buildAdvertsView(advert) {
   <p>${advert.description}<p>
   <div class=price>
   <p align="right">${advert.price}<p>
+  </a>
   `;
   return newAdvertListElement;
 }
