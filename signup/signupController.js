@@ -1,4 +1,6 @@
+import { pubSub } from "../pubSub.js";
 import { createUser } from "./signup.js";
+
 
 export function signupController(signupElement) {
   signupElement.addEventListener("submit", async (event) => {
@@ -16,10 +18,12 @@ export function signupController(signupElement) {
         try {
             await createUser(emailElement.value, passwordElement.value);
             signupElement.reset();
-            alert('usuario creado correctamente')
+            //alert('usuario creado correctamente')
+            pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'usuario creado correctamente')
             window.location = '/'
         } catch (error) {
-            alert (error.message)
+            //alert (error.message)
+            pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, error.message)
             
         }
     }
@@ -31,8 +35,8 @@ export function signupController(signupElement) {
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
 
-    if (!mailregExp.test(email)) {
-      alert("El email no está bien escrito");
+    if (!mailregExp.test(email)) {      
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'El email no está bien escrito')
       return false;
     }
     return true;
@@ -40,8 +44,8 @@ export function signupController(signupElement) {
   //comprobar que las contraseñas sean iguales
   function validPassword(password, passwordConfirmation) {
     
-    if (password !== passwordConfirmation) {
-      alert("Las contraseñas no son iguales");
+    if (password !== passwordConfirmation) {      
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'Las contraseñas no son iguales')
       return false;
     }
     return true;
