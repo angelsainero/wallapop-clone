@@ -1,31 +1,30 @@
+import { createUser } from "./signup.js";
+
 export function signupController(signupElement) {
-  signupElement.addEventListener("submit", (event) => {
+  signupElement.addEventListener("submit", async (event) => {
     //no queremos que haga el comportamiento por defecto (querystring en barra dir)
     event.preventDefault();
-
+    
+    const emailElement = signupElement.querySelector("#username");
     const passwordElement = signupElement.querySelector("#password");
     const passwordElementConfirm = signupElement.querySelector("#passwordConfirm");
-    const emailElement = signupElement.querySelector("#username");
 
     if (
       validEmail(emailElement.value) &&
       validPassword(passwordElement.value, passwordElementConfirm.value)
     ) {
-      createUser(emailElement.value, passwordElement.value);
+        try {
+            await createUser(emailElement.value, passwordElement.value);
+            signupElement.reset();
+            alert('usuario creado correctamente')
+            window.location = '/'
+        } catch (error) {
+            alert (error.message)
+            
+        }
     }
   });
-
-  //comprobar que las contraseñas sean iguales
-  function validPassword(password, passwordConfirmation) {
-    const passwordElementConfirm =
-      signupElement.querySelector("#passwordConfirm");
-
-    if (password !== passwordConfirmation) {
-      alert("Las contraseñas no son iguales");
-      return false;
-    }
-    return true;
-  }
+  
   //validamos email
   function validEmail(email) {
     const mailregExp = new RegExp(
@@ -38,27 +37,14 @@ export function signupController(signupElement) {
     }
     return true;
   }
-
-  async function createUser(email, password) {
-    //construir objeto con email y password siguiendo lo definido en el endpoint auth/register
-    const user = {
-      username: email,
-      password: password,
-    };
-    //consumir el api de sparrest usando un POST y enviando los datos que introducido el user
+  //comprobar que las contraseñas sean iguales
+  function validPassword(password, passwordConfirmation) {
     
-    await fetch('http://127.0.0.1:8000/auth/register', {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {
-            "Content-Type":"application/json"
-        }
-    })
-    //gestionar la respuesta
-
-
-
-
-
+    if (password !== passwordConfirmation) {
+      alert("Las contraseñas no son iguales");
+      return false;
+    }
+    return true;
   }
-}
+
+ }
