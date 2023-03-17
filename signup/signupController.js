@@ -29,7 +29,7 @@ export function signupController(signupElement) {
     }
   });
   
-  //validamos email
+  //validamos email //TODO Refactor con ValidEmail
   function validEmail(email) {
     const mailregExp = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
