@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "username": "sainero@sainero.com",
+      "password": "$2b$10$biNvM.c4FHBJu507SDUSuuO.EetPvTrHu.1DxUCwEtep2Bnb7k1Ru",
+      "id": 1
+    },
+    {
+      "username": "villar@villar.com",
+      "password": "$2b$10$biNvM.c4FHBJu507SDUSuuO.EetPvTrHu.1DxUCwEtep2Bnb7k1Ru",
+      "id": 2
+    },
+    {
+      "username": "angel@angel.com",
+      "password": "$2b$10$biNvM.c4FHBJu507SDUSuuO.EetPvTrHu.1DxUCwEtep2Bnb7k1Ru",
+      "id": 3
+    },
+    {
+      "username": "angelsainero@gmail.com",
+      "password": "$2b$10$biNvM.c4FHBJu507SDUSuuO.EetPvTrHu.1DxUCwEtep2Bnb7k1Ru",
+      "id": 4
+    },
+    {
+      "username": "angelsainero@hotmail.com",
+      "password": "$2b$10$PatQdx8MNHOVj7cg0SCQHOiC3hk7TnE1ZT2fRMOe6A8JP3SExmlfC",
+      "id": 5
+    }
+  ],
+  "adverts": [
+    {
+      "image": "https://cdn.pixabay.com/photo/2015/05/29/19/18/bicycle-789648_1280.jpg",
+      "name": "Bicicleta",
+      "description": "Bicicleta clásica en perfecto estado casi sin uso",
+      "price": 300,
+      "type": "venta",
+      "id": 1
+    },
+    {
+      "image": "https://cdn.pixabay.com/photo/2012/02/28/00/52/blank-17894_1280.jpg",
+      "name": "Televisión",
+      "description": "Televisión 43 pulgadas, marca Tomson en perfecto estado ",
+      "price": 150,
+      "type": "venta",
+      "id": 2
+    },
+    {
+      "image": "https://cdn.pixabay.com/photo/2015/02/05/08/06/macbook-624707_1280.jpg",
+      "name": "Ordenador portátil",
+      "description": "Compro ordenado portátil tipo Gamer en buen estado ",
+      "price": 500,
+      "type": "compra",
+      "id": 3
+    },
+    {
+      "image": "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_1280.jpg",
+      "name": "Zapatillas",
+      "description": "Zapatillas marca Asics, número 44, a estrenar.",
+      "price": 45,
+      "type": "venta",
+      "id": 4
+    },
+    {
+      "image": "https://cdn.pixabay.com/photo/2022/10/14/08/03/earbuds-7520738_1280.jpg",
+      "name": "Auriculares",
+      "description": "Compro auriculares in Ear inalámbricos sin usar",
+      "price": 25,
+      "type": "compra",
+      "id": 5
+    },
+    {
+      "image": "erer",
+      "name": "erere",
+      "description": " erere",
+      "price": "erere",
+      "type": "reerer",
+      "userId": 4,
+      "updatedAt": "2023-03-19T10:31:17.252Z",
+      "id": 7
+    }
+  ]
+}
