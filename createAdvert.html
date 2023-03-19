@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/form.css" />
     <title>Creación Anuncio</title>
 </head>
 <body>
     <section class="notifications"></section>
-    <form id="createAdvert">
+    <form id="createAdvert" class="form">
         <label for="picture">URL Imagen</label>
         <input type="text" name="picture" id="picture">
         <br>
     
         <label for="name">Nombre</label>
-        <input type="name" name="name" id="name"  required>
+        <input type="text" name="name" id="name"  required>
+        <br>
         <br>
     
         <label for="description">Descripción</label>
@@ -26,7 +28,9 @@
         <br>
 
         <label for="type">Tipo</label>
-        <input type="text" name="type" id="type"  required>
+        <br>
+        <input type="radio" name="type" value="compra" checked> Compra<br>
+    <input type="radio" name="type" value="venta"> Venta<br>
         <br>
     
         <button type="submit">Crear Anuncio</button>
@@ -36,3 +40,11 @@
 </html> 
 </body>
 </html>
+
+
+
+<form>
+    <input type="radio" name="gender" value="male" checked> Hombre<br>
+    <input type="radio" name="gender" value="female"> Mujer<br>
+    <input type="radio" name="gender" value="other"> Otro
+  </form>
