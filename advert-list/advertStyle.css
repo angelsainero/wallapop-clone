@@ -1,65 +1,133 @@
+
+a {
+  text-decoration:none;
+  color:rgb(53, 53, 52)
+  
+  }
+
+.title {
+  font-family: 'Righteous';
+  color:rgb(201, 226, 190);
+  font-size:300%;
+  align-self: center;
+  margin:20px;
+  text-align:center	
+ 
+}
+
+
+.wallapop-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-family:Arial, Helvetica, sans-serif
+}
+
 .advert {
-    border: solid 1px lightgray;
-    background-color: rgb(201, 226, 190);
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    padding: 10px;
+  border: solid 1px lightgray;
+  background-color: rgb(201, 226, 190);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 300px;
+  max-height: 300px;
 }
 
 .advert .adv-title {
-    display: flex;
-    justify-content:space-between;   
-    align-items: center;
-    font-size: large;
-    
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+}
+
+.price {
+  font-size: large; 
+}
+
+.type {
+  font-size: large; 
 }
 
 .advert img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    border-color: black;
-    border-style:groove;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border-color: black;
+  border-style: groove;
 }
-
-
 
 /* The alert message box */
 .alert {
-    padding: 20px;
-    background-color: #f44336; 
-    color: white;
-    margin-bottom: 15px;
-  }
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  
+}
 
-  .alert-ok {
-    padding: 20px;
-    background-color: rgb(201, 226, 190); 
-    color: white;
-    margin-bottom: 15px;
-  }  
+.alert-ok {
+  padding: 20px;
+  background-color: rgb(201, 226, 190);
+  color: white;
+  margin-bottom: 15px;
   
-  .alert-gray {
-    padding: 20px;
-    background-color: rgb(53, 53, 52); 
-    color: white;
-    margin-bottom: 15px;
-  }  
-  
-  /* The close button */
-  .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .closebtn:hover {
-    color: black;
-  }
+}
+
+.alert-gray {
+  padding: 20px;
+  background-color: rgb(53, 53, 52);
+  color: white;
+  margin-bottom: 15px;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/*navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(201, 226, 190);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

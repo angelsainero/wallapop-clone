@@ -1,0 +1,47 @@
+
+ .advert-detail {
+    display: flex;
+    justify-content: center;
+ }
+  
+  
+  
+  .detailed {
+    
+    border: solid 1px lightgray;
+    background-color: rgb(201, 226, 190);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 600px;
+    max-height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+  }
+  
+  .adv-title {
+    
+    font-size: large;
+  }
+  
+  .price {
+    font-size: large; 
+  }
+  
+  .type {
+    font-size: large; 
+  }
+  
+  .detailed img {
+
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: groove;
+    
+  }
+  
